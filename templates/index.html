@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Amazon Affiliate Store</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>🔥 Top Picks on Amazon</h1>
+    <div class="products">
+        {% for product in products %}
+        <div class="card">
+            <img src="{{ product.image }}" alt="{{ product.title }}">
+            <h3>{{ product.title }}</h3>
+            <a href="{{ product.link }}" target="_blank">Buy on Amazon</a>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
